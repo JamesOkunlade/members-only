@@ -1,4 +1,7 @@
 class SessionsController < ApplicationController
+  include ApplicationHelper
+
+
   def new
   end
 
@@ -7,6 +10,8 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       log_in user
       remember user
+      flash[:success] = "Successfully logged in"
+      redirect_to root_url
     else
       flash.now[:danger] = 'Invalid email/password combination'
       render 'new'

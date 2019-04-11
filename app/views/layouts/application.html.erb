@@ -10,34 +10,13 @@
   </head>
 
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <%= link_to "Members-only", id: "logo" %>
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Home" %></li>
-            <% if logged_in? %>
-              <li><%= link_to "Users", '#' %></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  Account <b class="caret"></b>
-                </a>
-                  <ul class="dropdown-menu">
-
-                    <li class="divider"></li>
-                    <li>
-                      <%= link_to "Log out", method: :delete %>
-                    </li>
-                  </ul>
-              </li>
-            <% else %>
-              <li><%= link_to "Log in", login_path %></li>
-            <% end %>
-          </ul>
-        </nav>
-      </div>
-    </header>
+  <div class="col-md-6 col-md-offset-3">
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+    <%= render 'layouts/header' %>
     <%= yield %>
     <%= debug(params) if Rails.env.development? %>
+    </div>
   </body>
 </html>
