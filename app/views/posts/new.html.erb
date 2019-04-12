@@ -1,0 +1,20 @@
+
+<div class="row">
+  <%= render 'shared/error_messages', object: @post %>
+
+
+  <h1>New post</h1>
+
+  <%= form_for @post do |f| %>
+
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+
+    <%= f.label :body %>
+    <%= f.text_area :body, class: 'form-control' %>
+
+    <%= f.submit "Create Post", class: "btn btn-primary" %>
+  <% end %>
+
+
+</div>
