@@ -1,4 +1,8 @@
-<h1>All Posts</h1>
+<h1>All Posts <span>
+  <%= link_to "Create new", new_post_path %>
+</span></h1>
+
+
 
 <table>
   <thead>
@@ -14,7 +18,7 @@
         <% if current_user %>
           <td><%= get_user_name_by_id post.user_id %></td>
         <% else %>
-          <td> <%= link_to "Log in", login_path %></td>
+          <td> <%= link_to "Log in to see", login_path %></td>
         <% end %>
         <td><%=post.title%></td>
         <td><%=post.body%></td>

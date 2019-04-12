@@ -21,6 +21,10 @@ textarea {
   margin-bottom: 10px;
 }
 
+span {
+  font-size: 16px;
+}
+
 $gray-medium-light: #eaeaea;
 
 @mixin box_sizing {
@@ -37,4 +41,16 @@ $gray-medium-light: #eaeaea;
   width: 100%;
   margin-top: 45px;
   @include box_sizing;
+}
+
+/* Posts Table */@at-root
+
+table {
+  padding: 10px;
+  border: 2px solid gray;
+
+  th, td {
+    padding: 10px;
+    border: 2px solid gray;
+  }
 }
