@@ -1,24 +1,27 @@
-# README
+# members-only
+A micro reddit clone where you can sign and create posts. The post will be available for everyone to see but only the signed in users will be able to see the author of each post.
+> https://www.airbnb.com/host/homes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Author
+Lade James
 
-Things you may want to cover:
+Adnan Afsari
 
-* Ruby version
+## Technologies
+Ruby
 
-* System dependencies
+## Framework
+Ruby on Rails
 
-* Configuration
+Bootstrap
 
-* Database creation
+## Installation
+> Open your git bash and **cd** to the location you'd like to put your files the run the command below.
 
-* Database initialization
+`git clone https://github.com/JamesOkunlade/members-only`
 
-* How to run the test suite
+**cd** to into the project folder and install using `bundle install --withoutproduction`
 
-* Services (job queues, cache servers, search engines, etc.)
+`rails db:migrate`
 
-* Deployment instructions
-
-* ...
+To start the server: `rails server`
