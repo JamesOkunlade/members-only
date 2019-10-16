@@ -1,6 +1,6 @@
 # members-only
 A micro reddit clone where you can sign and create posts. The post will be available for everyone to see but only the signed in users will be able to see the author of each post.
-> https://www.airbnb.com/host/homes
+
 
 ## Author
 Lade James
